@@ -4,10 +4,9 @@ from Base.base_driver import BaseDriver
 
 
 class ResultPage(BaseDriver):
-    def __init__(self, driver, wait):
-        super().__init__(driver, wait)
+    def __init__(self, driver):
+        super().__init__(driver)
         self.driver = driver
-        self.wait = wait
 
     def check_title(self, *titles: str):
         for title in titles:

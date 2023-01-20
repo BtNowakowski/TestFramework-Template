@@ -9,11 +9,10 @@ from Pages.results_page import ResultPage
 @pytest.mark.usefixtures("setup")
 class TestSearchAndVerifyFilter:
     def test_search_job(self):
-        lp = LaunchPage(self.driver, self.wait)
+        lp = LaunchPage(self.driver)
         lp.select_location("Zabrze", "Bytom", "Katowice")
         lp.select_position("Tester Oprogramowania", "QA")
         lp.click_submit()
-        rp = ResultPage(self.driver, self.wait)
+        rp = ResultPage(self.driver)
         rp.check_title("tester oprogramowania", "Zabrze")
 
-        time.sleep(4)

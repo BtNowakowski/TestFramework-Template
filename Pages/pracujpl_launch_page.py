@@ -7,10 +7,9 @@ from Base.base_driver import BaseDriver
 
 
 class LaunchPage(BaseDriver):
-    def __init__(self, driver, wait):
-        super().__init__(driver, wait)
+    def __init__(self, driver):
+        super().__init__(driver)
         self.driver = driver
-        self.wait = wait
 
     def select_position(self, *positions: str):
         """
@@ -21,7 +20,8 @@ class LaunchPage(BaseDriver):
         Returns:
 
         """
-        position = self.click_element("//div[@data-test='dropdown-element-kw']//input[@type='text']")
+        position = self.wait_for_clickable_element(By.XPATH,
+                                         "//div[@data-test='dropdown-element-kw']//input[@type='text']")
         for pos in positions:
             position.click()
             position.send_keys(pos+","+"\ue007")
@@ -32,7 +32,7 @@ class LaunchPage(BaseDriver):
         Args:
             *locations (str): Locations in which the job will be searched for
         """
-        location = self.click_element("//div[@data-test='dropdown-element-wp']//input[@type='text']")
+        location = self.wait_for_clickable_element(By.XPATH, "//div[@data-test='dropdown-element-wp']//input[@type='text']")
 
         for loc in locations:
             location.click()
@@ -42,4 +42,4 @@ class LaunchPage(BaseDriver):
         """
         Simply submits the form
         """
-        self.click_element("//button[normalize-space()='Szukaj']")
+        self.wait_for_clickable_element(By.XPATH, "//button[normalize-space()='Szukaj']").click()

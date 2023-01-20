@@ -3,39 +3,43 @@ import time
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.wait import WebDriverWait
 
 
 class BaseDriver():
-    def __init__(self, driver, wait):
+    def __init__(self, driver):
         self.driver = driver
-        self.wait = wait
 
-    def is_element_visible(self, xpath: str):
+    def is_element_visible(self, locator_type: str, locator: str):
         """
         Checks if the element of given xpath is visible on the page
         Args:
-            xpath: XPATH of an element on the page
+            locator_type: type of the locator
+
+            locator:  locator of an element on the page
 
         Returns:
             bool: True if element is visible, False if it's not visible
         """
+        wait = WebDriverWait(self.driver, 10)
         try:
-            self.wait.until(EC.visibility_of_element_located((By.XPATH, xpath)))
+            wait.until(EC.visibility_of_element_located((locator_type, locator)))
             return True
         except Exception:
             return False
 
-    def click_element(self, xpath: str) -> WebElement:
+    def wait_for_clickable_element(self, locator_type: str, locator: str) -> WebElement:
         """
-        Clicks on an element, and returns the WebElement
+            Returns the WebElement
         Args:
-            xpath: XPATH of an element on the page
+            locator_type: type of the locator
+
+            locator:  locator of an element on the page
 
         Returns:
-             WebElement: WebElement at given xpath
-
+            web_elem: WebElement at given locator
         """
-        elem = self.wait.until(EC.element_to_be_clickable((By.XPATH, xpath)))
-        elem.click()
-        return elem
+        wait = WebDriverWait(self.driver, 10)
+        web_elem = wait.until(EC.element_to_be_clickable((locator_type, locator)))
+        return web_elem
 
