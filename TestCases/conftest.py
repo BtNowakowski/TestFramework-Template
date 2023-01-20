@@ -1,9 +1,9 @@
 import pytest
 from selenium import webdriver
-from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.options import Options as ChromeOptions
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 
 # from selenium.webdriver.firefox.options import Options as FirefoxOptions
 # from selenium.webdriver.firefox.service import Service as FirefoxService

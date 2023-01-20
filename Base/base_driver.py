@@ -28,6 +28,11 @@ class BaseDriver():
         except Exception:
             return False
 
+    def get_visible_elements(self, locator_type: str, locator: str) -> list[WebElement]:
+        wait = WebDriverWait(self.driver, 10)
+        web_elem = wait.until(EC.visibility_of_all_elements_located((locator_type, locator)))
+        return web_elem
+
     def wait_for_clickable_element(self, locator_type: str, locator: str) -> WebElement:
         """
             Returns the WebElement
