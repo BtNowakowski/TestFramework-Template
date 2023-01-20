@@ -16,5 +16,3 @@ class TestSearchAndVerifyFilter:
     def test_search_job(self):
         search_job_results = self.lp.search_for_job(locations=["Katowice"], positions=["Tester Oprogramowania"])
         search_job_results.check_if_title_contains("tester", "oprogramowania", "tester oprogramowania")
-
-        search_job_results.prnt()
