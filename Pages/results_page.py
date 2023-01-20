@@ -9,6 +9,11 @@ class ResultPage(BaseDriver):
         self.driver = driver
 
     def check_title(self, *titles: str):
+        """
+        Asserts title of page to given strings
+        Args:
+            *titles (str): titles to be checked
+        """
         for title in titles:
             flag = self.driver.title.__contains__(title)
         assert flag
