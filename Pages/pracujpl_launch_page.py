@@ -1,8 +1,6 @@
-import time
-
+# import time
+# from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
-from selenium.webdriver.support import expected_conditions as EC
-
 from Base.base_driver import BaseDriver
 
 
