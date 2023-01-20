@@ -1,8 +1,8 @@
-import time
+# import time
 import pytest
 from Pages.pracujpl_launch_page import LaunchPage
 from Pages.results_page import ResultPage
-from Utilities.utils import Utils
+# from Utilities.utils import Utils
 
 
 @pytest.mark.usefixtures("setup")
@@ -13,4 +13,4 @@ class TestSearchAndVerifyFilter:
         lp.select_position("Tester Oprogramowania", "QA")
         lp.click_submit()
         rp = ResultPage(self.driver)
-        rp.check_title("tester oprogramowania", "Zabrze")
+        rp.check_title("tester Oprogramowania", "Zabrze")
