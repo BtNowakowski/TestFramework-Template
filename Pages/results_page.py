@@ -1,8 +1,4 @@
 from Base.base_driver import BaseDriver
-import logging
-import softest
-
-
 from Utilities.utils import Utils
 
 

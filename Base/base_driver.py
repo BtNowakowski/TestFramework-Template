@@ -46,15 +46,20 @@ class BaseDriver():
         Returns:
             web_elem: WebElement at given locator
         """
-        wait = WebDriverWait(self.driver, 10)
+        wait = WebDriverWait(self.driver, 20)
         web_elem = wait.until(EC.element_to_be_clickable((locator_type, locator)))
         return web_elem
 
     def get_title(self):
-        self.log.info("Get title\n")
+        self.log.info("Got webpage title\n")
         return self.driver.title
 
     def check_if_page_title_contains(self, strings: list[str]):
+        """
+        Checks if webpage title contains given strings
+        Args:
+            strings (list[str]): strings to be checked
+        """
         title = self.get_title()
 
         for tt in strings:

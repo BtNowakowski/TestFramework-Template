@@ -27,6 +27,16 @@ class LaunchPage(BaseDriver):
     def get_submit_button(self) -> WebElement:
         return self.wait_for_clickable_element(By.XPATH, self.SUBMIT_BUTTON)
 
+    def clear_position_input_field(self):
+        self.get_position_input_field().click()
+        self.get_position_input_field().send_keys(Keys.CONTROL + "a")
+        self.get_position_input_field().send_keys(Keys.DELETE)
+
+    def clear_location_input_field(self):
+        self.get_location_input_field().click()
+        self.get_location_input_field().send_keys(Keys.CONTROL + "a")
+        self.get_location_input_field().send_keys(Keys.DELETE)
+
     def enter_position(self, *positions: str):
         """
         Enters all positions given, into positions input
@@ -53,9 +63,13 @@ class LaunchPage(BaseDriver):
         """
         self.get_submit_button().click()
 
+    def clear_fields(self):
+        self.clear_location_input_field()
+        self.clear_position_input_field()
+
     def search_for_job(self, positions: list[str], locations: list[str]) -> ResultPage:
         """
-        Method which enters all information given into input fields and submits the form
+        Method which enters all information given into input fields, submits, and clears the form
         Args:
             positions (list[str]): positions to be entered
             locations (list[str]): locations to be entered
@@ -63,5 +77,7 @@ class LaunchPage(BaseDriver):
         self.enter_position(*positions)
         self.enter_location(*locations)
         self.click_submit_button()
+        self.clear_fields()
         job_search_results = ResultPage(self.driver)
         return job_search_results
+

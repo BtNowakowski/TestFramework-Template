@@ -8,15 +8,13 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.edge.service import Service as EdgeService
 from selenium.common.exceptions import NoSuchElementException
-# from selenium.webdriver.support.wait import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as EC
-
 from Base.base_driver import BaseDriver
 from Utilities.utils import Utils
 
 
 @pytest.fixture(scope="class", autouse=True)
 def setup(request, browser, url):
+    global driver
     if browser == "chrome":
         driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
     elif browser == "firefox":

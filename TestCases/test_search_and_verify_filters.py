@@ -1,6 +1,6 @@
 import pytest
 import softest
-from ddt import ddt, data, unpack, file_data
+from ddt import ddt, file_data
 from Pages.pracujpl_launch_page import LaunchPage
 from Utilities.utils import Utils
 
