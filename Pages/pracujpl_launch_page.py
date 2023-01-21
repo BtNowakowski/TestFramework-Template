@@ -2,7 +2,7 @@
 # from selenium.webdriver.support import expected_conditions as EC
 import time
 from selenium.webdriver.remote.webelement import WebElement
-from selenium.webdriver import Keys
+from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from Base.base_driver import BaseDriver
 from Pages.results_page import ResultPage

@@ -1,0 +1,19 @@
+2023-01-21 21:08:03,928 - ResultPage - INFO - Get title
+
+2023-01-21 21:08:03,932 - ResultPage - INFO - String to be tested: Katowice
+2023-01-21 21:08:03,932 - ResultPage - INFO - Assertion completed successfully! Title contains Katowice
+
+2023-01-21 21:08:03,932 - ResultPage - INFO - String to be tested: Zabrze
+2023-01-21 21:08:03,932 - ResultPage - INFO - Assertion completed successfully! Title contains Zabrze
+
+2023-01-21 21:08:03,932 - ResultPage - INFO - String to be tested: tester oprogramowania
+2023-01-21 21:08:03,932 - ResultPage - INFO - Assertion completed successfully! Title contains tester oprogramowania
+
+2023-01-21 21:08:04,791 - ResultPage - INFO - Get title
+
+2023-01-21 21:08:04,794 - ResultPage - INFO - String to be tested: Warszawa
+2023-01-21 21:08:04,795 - ResultPage - INFO - Assertion completed successfully! Title contains Warszawa
+
+2023-01-21 21:08:04,795 - ResultPage - INFO - String to be tested: Programista
+2023-01-21 21:08:04,795 - ResultPage - INFO - Assertion completed successfully! Title contains Programista
+
