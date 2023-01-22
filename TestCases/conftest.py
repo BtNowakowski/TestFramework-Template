@@ -87,4 +87,5 @@ def pytest_runtest_makereport(item):
 
 
 def pytest_html_report_title(report):
-    report.title = "RCV Academy Automation Report"
+    report.title = "Test Automation Report"
+    

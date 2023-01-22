@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.wait import WebDriverWait
@@ -11,6 +13,19 @@ class BaseDriver():
 
     log = Utils.custom_logger()
     ut = Utils()
+
+    def page_scroll(self):
+        pageLength = self.driver.execute_script(
+            "window.scrollTo(0, document.body.scrollHeight);var pageLength=document.body.scrollHeight;return pageLength;")
+        match = False
+        while (match == False):
+            lastCount = pageLength
+            time.sleep(1)
+            pageLength = self.driver.execute_script(
+                "window.scrollTo(0, document.body.scrollHeight);var pageLength=document.body.scrollHeight;return pageLength;")
+            if lastCount == pageLength:
+                match = True
+        time.sleep(4)
 
     def is_element_visible(self, locator_type: str, locator: str):
         """

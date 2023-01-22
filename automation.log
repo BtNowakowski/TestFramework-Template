@@ -1,22 +1,14 @@
-2023-01-21 22:44:17,196 - ResultPage - INFO - Got webpage title
+2023-01-22 11:30:20,376 - ResultPage - INFO - Got webpage title
 
-2023-01-21 22:44:17,224 - ResultPage - INFO - String to be tested: Katowice
-2023-01-21 22:44:17,224 - ResultPage - INFO - Assertion completed successfully! Title contains Katowice
+2023-01-22 11:30:20,380 - ResultPage - INFO - String to be tested: Katowice
+2023-01-22 11:30:20,380 - ResultPage - INFO - Assertion completed successfully! Title contains Katowice
 
-2023-01-21 22:44:17,224 - ResultPage - INFO - String to be tested: Zabrze
-2023-01-21 22:44:17,224 - ResultPage - INFO - Assertion completed successfully! Title contains Zabrze
+2023-01-22 11:30:20,380 - ResultPage - INFO - String to be tested: Zabrze
+2023-01-22 11:30:20,380 - ResultPage - INFO - Assertion completed successfully! Title contains Zabrze
 
-2023-01-21 22:44:17,224 - ResultPage - INFO - String to be tested: pozdro
-2023-01-21 22:44:17,224 - ResultPage - CRITICAL - Assertion failed Title doesn't contain pozdro
+2023-01-22 11:30:20,380 - ResultPage - INFO - String to be tested: pozdro
+2023-01-22 11:30:20,380 - ResultPage - CRITICAL - Assertion failed Title doesn't contain pozdro
 
-2023-01-21 22:44:17,224 - ResultPage - INFO - String to be tested: tester oprogramowania
-2023-01-21 22:44:17,225 - ResultPage - INFO - Assertion completed successfully! Title contains tester oprogramowania
-
-2023-01-21 22:44:19,084 - ResultPage - INFO - Got webpage title
-
-2023-01-21 22:44:19,093 - ResultPage - INFO - String to be tested: Warszawa
-2023-01-21 22:44:19,093 - ResultPage - INFO - Assertion completed successfully! Title contains Warszawa
-
-2023-01-21 22:44:19,093 - ResultPage - INFO - String to be tested: Programista
-2023-01-21 22:44:19,093 - ResultPage - INFO - Assertion completed successfully! Title contains Programista
+2023-01-22 11:30:20,380 - ResultPage - INFO - String to be tested: tester oprogramowania
+2023-01-22 11:30:20,380 - ResultPage - INFO - Assertion completed successfully! Title contains tester oprogramowania
 
