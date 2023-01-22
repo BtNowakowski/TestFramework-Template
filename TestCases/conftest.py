@@ -1,6 +1,5 @@
 import os
 import time
-
 import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -29,7 +28,6 @@ def setup(request, browser, url):
         raise ValueError("Invalid browser parameter!")
 
     driver.get(url)
-    # "https://www.pracuj.pl/"
     driver.maximize_window()
     request.cls.driver = driver
 
@@ -88,4 +86,3 @@ def pytest_runtest_makereport(item):
 
 def pytest_html_report_title(report):
     report.title = "Test Automation Report"
-    
