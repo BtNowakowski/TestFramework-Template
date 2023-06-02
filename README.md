@@ -1,2 +1,2 @@
-# TestFramework-pracujpl
-Template for an automation framework 
+# TestFramework Template
+Template for an automation framework
