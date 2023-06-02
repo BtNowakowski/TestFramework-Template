@@ -2,7 +2,7 @@
     "test1": {
       "locations": ["Katowice", "Zabrze"],
       "positions": ["Tester Oprogramowania", "QA"],
-      "strings": ["Katowice", "Zabrze","tester oprogramowania"]
+      "strings": ["Katowice", "Zabrze","pozdro" ,"tester oprogramowania"]
     },
     "test2": {
       "locations": ["Warszawa"],
